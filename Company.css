@@ -1,0 +1,557 @@
+  :root {
+      --primary: #4bc2ca;
+      --primary-dark: #3aa8b0;
+      --primary-darker: #2a8e96;
+      --secondary: #2a5275;
+      --secondary-light: #3a6388;
+      --white: #ffffff;
+      --light-bg: #f0f9fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--secondary);
+      overflow-x: hidden;
+    }
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 3%;
+      background-color: #4bc2ca;
+      box-shadow: 0 10px 30px rgba(42, 82, 117, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(75, 194, 202, 0.2);
+    }
+
+    .logo {
+      font-weight: 800;
+      color: var(--secondary);
+      font-size: 1.5rem;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      top: -10px;
+      left: -15px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .main-nav a:hover {
+      color: white;
+    }
+
+    .main-nav a::after {
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+      .why-hire {
+      width: 100%;
+      padding: 4rem 0; 
+      background: linear-gradient(rgba(37, 64, 105, 0.8), rgba(37, 64, 105, 0.8)),
+                  url('/images/swirl2-2.webp') center/cover no-repeat;
+      background-attachment: fixed;
+      color: var(--white); 
+      margin-top: 0; 
+    }
+
+
+    .why-hire .container {
+      margin-top: 0;
+    }
+
+    .section-title {
+      font-size: 2.75rem; 
+      font-weight: 800; 
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      line-height: 1.15; 
+      letter-spacing: -0.5px; 
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+
+    .section-title span.highlight {
+      color: #4bc2ca;
+    }
+
+    .why-hire-background {
+      background-color: transparent; 
+      padding: 0; 
+    }
+
+    .why-hire-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .why-hire-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .why-hire-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      opacity: 0.9; 
+    }
+
+    .why-hire-content-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .why-hire-card {
+      flex: 1 1 300px;
+      min-width: 300px;
+      max-width: 380px;
+      background-color: #2e4f77;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        inset 0 -4px 8px rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(75, 194, 202, 0.2);
+    }
+
+    .why-hire-card:hover {
+      transform: translateY(-10px);
+      box-shadow:
+        0 20px 30px rgba(0, 0, 0, 0.4),
+        inset 0 -4px 8px rgba(255, 255, 255, 0.05);
+      border-color: rgba(75, 194, 202, 0.4);
+    }
+
+    .why-hire-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #4bc2ca;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+
+    .why-hire-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .how-it-works {
+      padding: 4rem 0;
+      background-color: var(--light-bg);
+      text-align: center;
+    }
+
+    .section-title1{
+      color: #2a5275;
+      font-size: 2.75rem; 
+      font-weight: 800; 
+      margin-bottom: 1.5rem;
+      line-height: 1.15; 
+      letter-spacing: -0.5px; 
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .process-steps {
+      flex: 1;
+    }
+
+    .step {
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .step-header {
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: var(--primary);
+      color: white;
+    }
+
+    .step.active .step-header {
+      background:  var(--secondary);
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: white;
+      color: var(--secondary);
+      border-radius: 50%;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .step-title {
+      margin: 0;
+      flex: 1;
+      font-size: 1.2rem;
+    }
+
+    .step-toggle {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .step.active .step-toggle {
+      transform: rotate(45deg);
+    }
+
+    .step-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .step.active .step-content {
+      padding: 1.5rem;
+      max-height: 500px;
+    }
+
+    .group-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    
+    .values-section {
+        padding: 60px 20px;
+        background-color: #2a5275;
+        }
+
+    .values-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        }
+
+    .value-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        flex: 1 1 250px;
+        max-width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    .value-card h3 {
+        margin-top: 0;
+        color: #4bc2ca;
+        text-align: center;
+        }
+
+    .value-card p {
+        color: #666666;
+        text-align: center;
+        }
+
+  
+/* Responsive adjustments - DRY version */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  
+  .section-title::after,
+  .why-hire-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .why-hire {
+    padding: 3rem 0;
+    background-attachment: scroll;
+  }
+  
+  .process-wrapper,
+  .why-hire-card {
+    flex-direction: column;
+  }
+  
+  .process-image {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+.btn-link {
+  color: #4bc2ca;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+ color:black
+}
+
+   @media (max-width: 768px) {
+     .values-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    .value-card {
+            max-width: 100%;
+        }
+        }
+
+   .flex-container {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      background: linear-gradient(to right, #e0e0e0, #f9f9f9); 
+      height: 300px;
+      background: linear-gradient(rgba(37, 64, 105, 0.8), rgba(37, 64, 105, 0.8)),
+      url('/images/swirl2-2.webp') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+
+  .column {
+      flex: 1;
+      padding: 20px;
+      background-color: #4bc2ca;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transform: perspective(1000px) translateZ(0);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 250px;
+      margin-bottom: 30px;
+    }
+
+  .heading {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 1.8rem;
+     color: #2a5275;
+    }
+
+  .text {
+      text-align: center;
+      margin-top: 1px;
+      font-size: 1.1rem;
+      color: #f1f1f1; 
+    }
+
+
+  .main-footer {
+      background-color: var(--primary-dark);
+      color: var(--white);
+      padding: 4rem 5% 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-column h3 {
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-column ul li a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 12px;
+    }
+
+    .social-links a {
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .terms-container {
+      text-align: center;
+      margin-top: -12px;
+      padding-top: 36px;
+     
+    }
+
+      .tc-button {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        text-decoration: none;
+        color: inherit;
+        transition: opacity 0.3s ease;
+      }
+
+      .tc-button:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .quote-highlight {
+        font-size: 1.2rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .main-nav {
+        display: none;
+      }
+    }
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+  }
+  
+  .section-title br {
+    display: none;
+  }
+  
+  .why-hire {
+    padding: 2.5rem 0;
+  }
+  
+  .why-hire-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+

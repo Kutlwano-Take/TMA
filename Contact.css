@@ -1,0 +1,288 @@
+  :root {
+      --primary: #4bc2ca;
+      --primary-dark: #3aa8b0;
+      --primary-darker: #2a8e96;
+      --secondary: #2a5275;
+      --secondary-light: #3a6388;
+      --white: #ffffff;
+      --light-bg: #f0f9fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--secondary);
+      overflow-x: hidden;
+    }
+
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 3%;
+      background-color: #4bc2ca;
+      box-shadow: 0 10px 30px rgba(42, 82, 117, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(75, 194, 202, 0.2);
+    }
+
+    .logo {
+      font-weight: 800;
+      color: var(--secondary);
+      font-size: 1.5rem;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      top: -10px;
+      left: -15px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .main-nav a:hover {
+      color: white;
+    }
+
+    .main-nav a::after {
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    } 
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        h2 {
+            color: #2e4f77;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2e4f77;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: #4bc2ca;
+            outline: none;
+        }
+        
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #2e4f77;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3a5f8a;
+        }
+
+        /* Footer */
+      .main-footer {
+      background-color: var(--primary-dark);
+      color: var(--white);
+      padding: 4rem 5% 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-column h3 {
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-column ul li a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 12px;
+    }
+
+    .social-links a {
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .terms-container {
+      text-align: center;
+      margin-top: -12px;
+      padding-top: 36px;
+     
+    }
+
+      .tc-button {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        text-decoration: none;
+        color: inherit;
+        transition: opacity 0.3s ease;
+      }
+
+      .tc-button:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
+
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .timeline::before {
+        left: 40px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-date,
+      .timeline-item:nth-child(even) .timeline-date {
+        left: 80px;
+        right: auto;
+        top: -30px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot {
+        left: 30px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content::before,
+      .timeline-item:nth-child(even) .timeline-content::before {
+        left: -10px;
+        right: auto;
+      }
+    }
